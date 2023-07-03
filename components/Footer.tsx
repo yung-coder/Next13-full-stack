@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="flex flex-col gap-2 w-full">
         <div className="flex items-start flex-col">
           <Image
-            src=""
+            src={""}
             width={155}
             height={38}
             alt="Flexible"
