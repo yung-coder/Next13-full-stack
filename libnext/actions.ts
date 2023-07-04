@@ -67,7 +67,7 @@ export const createNewProject = async (form: ProjectForm, creatorId: string, tok
   const imageUrl = await uploadImage(form.image);
 
   if (imageUrl.url) {
-    // client.setHeader("Authorization", `Bearer ${token}`);
+    client.setHeader("Authorization", `Bearer ${token}`);
 
     const variables = {
       input: { 
