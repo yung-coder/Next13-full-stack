@@ -8,7 +8,7 @@ import FormField from "./FormField";
 import Button from "./Button";
 import CustomMenu from "./CustomMenu";
 import { categoryFilters } from "@/constants";
-import { createNewProject, fetchToken } from "@/libnext/actions";
+import { createNewProject, fetchToken, updateProject } from "@/libnext/actions";
 import { FormState, ProjectInterface, SessionInterface } from "@/common.types";
 
 type Props = {
@@ -73,17 +73,16 @@ const ProjectForm = ({ type, session, project }: Props) => {
         router.push("/");
       }
 
-      /* if (type === "edit") {
+      if (type === "edit") {
         await updateProject(form, project?.id as string, token);
 
         router.push("/");
-      } */
+      }
     } catch (error) {
-      /* alert(
+      alert(
         `Failed to ${type === "create" ? "create" : "edit"
-        } a project. Try again! ${error.message}` ,
-      ); */ 
-      console.log(error.message)
+        } a project. Try again!`,
+      );
     } finally {
       setSubmitting(false);
     }
