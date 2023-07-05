@@ -18,7 +18,7 @@ mutation CreateUser($input: UserCreateInput!) {
     user {
       name
       email
-      avatarUrl
+      avatarurl
       description
       githuburl
       linkedInUrl
@@ -126,8 +126,8 @@ export const getProjectsOfUserQuery = `
       email
       description
       avatarUrl
-      githubUrl
-      linkedinUrl
+      githuburl
+      linkedInUrl
       projects(last: $last) {
         edges {
           node {
