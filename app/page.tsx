@@ -46,7 +46,7 @@ export default async function Home(
   return (
     <section className="flexStart flex-col   paddings mb-16">
       <Categories />
-      <section className="projects-grid ">
+      <section className="projects-grid h-full">
         {projectsToDisplay.map(({ node }: { node: ProjectInterface }) => (
           <ProjectCard
             key={node?.id}
